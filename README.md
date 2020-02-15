@@ -32,6 +32,8 @@ Subscribe topic
 Will topic
 - #define MQTT_WILL_MSG   "I am leaving..."   
 Will message
+- #define UART_BAUDRATE   115200   
+UART boudrate
 - const char* ssid = "SSID of Your AP";   
 SSID of your Access Point
 - const char* password = "PASSWORD of Your AP";   
@@ -54,6 +56,8 @@ Publish topic
 Will topic
 - #define MQTT_WILL_MSG   "I am leaving..."   
 Will message
+- #define UART_BAUDRATE   115200   
+UART boudrate
 - const char* ssid = "SSID of Your AP";   
 SSID of your Access Point
 - const char* password = "PASSWORD of Your AP";   
