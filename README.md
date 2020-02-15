@@ -13,6 +13,7 @@ RXD2 of ESP8266 is GPIO13.
 ```
 
 # Monitoring
+You can monitor ESP8266 using Serial1.   
 Serial1 outputs to GPIO2
 
 # MQTT to UART
