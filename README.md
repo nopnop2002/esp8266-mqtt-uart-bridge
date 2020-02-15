@@ -39,7 +39,7 @@ Password of your Access Point
 
 # UART to MQTT
 
-![esp8266_uart_to_mqtt](https://user-images.githubusercontent.com/6020549/74579216-55da7100-4fdc-11ea-9b3b-a6f54c6f8bab.jpg)
+![esp8266_uart_to_mqtt](https://user-images.githubusercontent.com/6020549/74579472-262c6880-4fde-11ea-9f81-ce0632e203a0.jpg)
 
 You need to adjust the following environment.
 
