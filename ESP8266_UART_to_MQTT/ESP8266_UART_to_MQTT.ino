@@ -20,6 +20,8 @@
 #define MQTT_WILL_TOPIC "atmega328"       // You can change
 #define MQTT_TOPIC      "atmega328"       // You can change
 #define MQTT_WILL_MSG   "I am leaving..." // You can change
+#define UART_BAUDRATE   115200            // You can change
+#define RXBUFFERSIZE    1024
 
 const char* ssid = "SSID of Your AP";
 const char* password = "PASSWORD of Your AP";
@@ -34,7 +36,7 @@ uint8_t iofs=0;
 #define RXBUFFERSIZE 1024
 #define UART_BAUDRATE 115200  // You can change
 
-void errorDisplay(char* buff) {
+ errorDisplay(char* buff) {
   Serial1.print("Error:");
   Serial1.println(buff);
   for (int i=0;i<10;i++) {
