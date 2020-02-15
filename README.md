@@ -9,19 +9,19 @@ esp8266 mqtt uart bridge.
 ## Environment
 You need to adjust the following environment.
 
-- #define MQTT_SERVER     "192.168.10.40"
+- #define MQTT_SERVER     "192.168.10.40"   
 IP of MQTT Broker
-- #define MQTT_PORT       1883
+- #define MQTT_PORT       1883   
 Port of MQTT Broker
-- #define MQTT_TOPIC      "atmega328"
+- #define MQTT_TOPIC      "atmega328"   
 Subscribe topic
-- #define MQTT_WILL_TOPIC "atmega328"
+- #define MQTT_WILL_TOPIC "atmega328"   
 Will topic
-- #define MQTT_WILL_MSG   "I am leaving..."
+- #define MQTT_WILL_MSG   "I am leaving..."   
 Will message
-- const char* ssid = "SSID of Your AP";
+- const char* ssid = "SSID of Your AP";   
 SSID of your Access Point
-- const char* password = "PASSWORD of Your AP";
+- const char* password = "PASSWORD of Your AP";   
 Password of your Access Point
 
 ## Connection
