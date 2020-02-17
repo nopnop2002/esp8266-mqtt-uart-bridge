@@ -38,7 +38,8 @@ The boot message does not reach RX port of other side.
 However, since GPIO15 is the pin that determines the boot mode, the ESP8266 may not start.
 
 ## Add a circuit
-If the following circuit is added, All message does not reach RX port of other side.
+If the following circuit is added, All message does not reach RX port of other side.   
+I used 1N5819 Schottky Barrier Plastic Rectifier.   
 
 ![UART_BOOT_MESSAGE](https://user-images.githubusercontent.com/6020549/74654209-28084e80-51cd-11ea-8af5-d0c03551a484.jpg)
 
