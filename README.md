@@ -51,6 +51,8 @@ Serial.begin(115200);
 ```
 
 __NOTE:GPIO15 cannot be used because it is pulled down.__   
+__NOTE:You may use a logic IC like 74HC32.__
+
 
 # MQTT to UART
 
