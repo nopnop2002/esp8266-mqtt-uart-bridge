@@ -1,6 +1,7 @@
 # esp8266_mqtt_uart_bridge
 esp8266 mqtt uart bridge.
 
+
 # Connection
 ESP8266 serial is SWAP.   
 TXD2 of ESP8266 is GPIO15.   
@@ -15,6 +16,45 @@ RXD2 of ESP8266 is GPIO13.
 # Monitoring
 You can monitor ESP8266 using Serial1.   
 Serial1 outputs to GPIO2
+
+# Disable UART boot messages
+The ESP8266 boot rom writes a log to the UART when booting like this:
+```
+ets Jan  8 2014,rst cause 1, boot mode:(3,7)
+
+load 0x40100000, len 24236, room 16
+tail 12
+chksum 0xb7
+ho 0 tail 12 room 4
+load 0x3ffe8000, len 3008, room 12
+tail 4
+chksum 0x2c
+load 0x3ffe8bc0, len 4816, room 4
+tail 12
+chksum 0x46
+csum 0x46
+```
+This cannot be disabled.   
+However, you can keep them out of reach.   
+
+## Swap UART
+UART can be swapped by adding the following one line:
+```
+Serial.swap();   
+```
+TX / RX changes to the following when UART is swapped.
+```
+GPIO15(TXD)   --- RX
+GPIO13(RXD)   --- TX
+```
+However, since GPIO15 is the pin that determines the boot mode, the ESP8266 may not start.
+
+## Add a circuit
+If the following circuit is added, the other party will not receive the boot message.
+
+![UART_BOOT_MESSAGE](https://user-images.githubusercontent.com/6020549/74649393-c80caa80-51c2-11ea-9b68-86ff19635b69.jpg)
+
+
 
 # MQTT to UART
 

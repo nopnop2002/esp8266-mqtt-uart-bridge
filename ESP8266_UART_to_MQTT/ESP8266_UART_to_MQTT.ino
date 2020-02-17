@@ -3,13 +3,6 @@
  *
  * TX of Serial1 for ESP8266 is GPIO2
  *
- * ESP8266 serial is SWAP.
- * TXD2 of ESP8266 is GPIO15
- * RXD2 of ESP8266 is GPIO13
- *
- * ESP8266           UNO
- * GPIO15(TXD)   --- RX
- * GPIO13(RXD)   --- TX
  */
 
 #include <ESP8266WiFi.h>
@@ -54,7 +47,7 @@ void setup()
   // The default value is 256.
   Serial.setRxBufferSize(RXBUFFERSIZE);
   // Hardware serial is now on RX:GPIO13 TX:GPIO15
-  Serial.swap();
+  //Serial.swap();
 
   // Connect Wifi
   Serial1.println();
