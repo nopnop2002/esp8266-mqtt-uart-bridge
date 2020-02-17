@@ -47,6 +47,7 @@ To start transmission, set the GPIO polarity to OUTPUT and the level to LOW.
 ```
 pinMode(GPIO, OUTPUT);
 digitalWrite(GPIO, LOW);
+Serial.begin(115200);
 ```
 
 __NOTE:GPIO15 cannot be used because it is pulled down.__   
