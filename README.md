@@ -49,7 +49,7 @@ pinMode(GPIO, OUTPUT);
 digitalWrite(GPIO, LOW);
 ```
 
-** NOTE:GPIO15 cannot be used because it is pulled down.   
+__NOTE:GPIO15 cannot be used because it is pulled down.__   
 
 # MQTT to UART
 
