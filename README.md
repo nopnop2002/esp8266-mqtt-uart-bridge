@@ -44,6 +44,13 @@ If the following circuit is added, All message does not reach RX port of other s
 
 To start transmission, set the GPIO polarity to OUTPUT and the level to LOW.   
 
+```
+pinMode(GPIO, OUTPUT);
+digitalWrite(GPIO, LOW);
+```
+
+** NOTE:GPIO15 cannot be used because it is pulled down.   
+
 # MQTT to UART
 
 ![esp8266_mqtt_to_uart](https://user-images.githubusercontent.com/6020549/74579213-5246ea00-4fdc-11ea-94cf-10b20d2a71ac.jpg)
