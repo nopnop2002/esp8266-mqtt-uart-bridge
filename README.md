@@ -52,6 +52,7 @@ Serial.begin(115200);
 ```
 
 __NOTE:GPIO15 cannot be used because it is pulled down.__   
+__NOTE:I tested ESP-13.__
 
 
 # MQTT to UART
