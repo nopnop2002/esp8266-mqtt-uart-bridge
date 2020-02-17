@@ -40,7 +40,7 @@ However, since GPIO15 is the pin that determines the boot mode, the ESP8266 may 
 ## Add a circuit
 If the following circuit is added, All message does not reach RX port of other side.
 
-![UART_BOOT_MESSAGE](https://user-images.githubusercontent.com/6020549/74649393-c80caa80-51c2-11ea-9b68-86ff19635b69.jpg)
+![UART_BOOT_MESSAGE](https://user-images.githubusercontent.com/6020549/74654209-28084e80-51cd-11ea-8af5-d0c03551a484.jpg)
 
 To start transmission, set the GPIO polarity to OUTPUT and the level to LOW.   
 
