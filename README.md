@@ -22,6 +22,7 @@ tail 12
 chksum 0x46
 csum 0x46
 ```
+This message can cause unexpected trouble.   
 
 ## Swap UART
 UART can be swapped by adding the following one line:
