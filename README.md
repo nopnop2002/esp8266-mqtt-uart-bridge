@@ -1,18 +1,6 @@
 # esp8266_mqtt_uart_bridge
 esp8266 mqtt uart bridge.
 
-
-# Connection
-ESP8266 serial is SWAP.   
-TXD2 of ESP8266 is GPIO15.   
-RXD2 of ESP8266 is GPIO13.   
-
-```
- * ESP8266           UNO
- * GPIO15(TXD)   --- RX
- * GPIO13(RXD)   --- TX
-```
-
 # Monitoring
 You can monitor ESP8266 using Serial1.   
 Serial1 outputs to GPIO2
@@ -34,8 +22,6 @@ tail 12
 chksum 0x46
 csum 0x46
 ```
-This cannot be disabled.   
-However, you can keep them out of reach.   
 
 ## Swap UART
 UART can be swapped by adding the following one line:
@@ -47,14 +33,15 @@ TX / RX changes to the following when UART is swapped.
 GPIO15(TXD)   --- RX
 GPIO13(RXD)   --- TX
 ```
+The boot message does not reach RX port of other side.   
 However, since GPIO15 is the pin that determines the boot mode, the ESP8266 may not start.
 
 ## Add a circuit
-If the following circuit is added, the other party will not receive the boot message.
+If the following circuit is added, All message does not reach RX port of other side.
 
 ![UART_BOOT_MESSAGE](https://user-images.githubusercontent.com/6020549/74649393-c80caa80-51c2-11ea-9b68-86ff19635b69.jpg)
 
-
+To start transmission, set the GPIO polarity to OUTPUT and the level to LOW.   
 
 # MQTT to UART
 
