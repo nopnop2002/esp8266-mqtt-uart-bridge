@@ -5,7 +5,7 @@ esp8266 mqtt uart bridge.
 You can monitor ESP8266 using Serial1.   
 Serial1 outputs to GPIO2
 
-# Disable UART boot messages
+# How to disable UART boot messages
 The ESP8266 boot rom writes a log to the UART when booting like this:
 ```
 ets Jan  8 2014,rst cause 1, boot mode:(3,7)
