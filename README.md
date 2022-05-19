@@ -1,6 +1,11 @@
 # esp8266_mqtt_uart_bridge
 esp8266 mqtt uart bridge.
 
+- Convert from UART output to MQTT publish.   
+
+- Convert from MQTT subscribe to UART input.   
+
+
 # Monitoring
 You can monitor ESP8266 using Serial1.   
 Serial1 outputs to GPIO2
