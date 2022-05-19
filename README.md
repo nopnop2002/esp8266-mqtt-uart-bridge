@@ -10,8 +10,8 @@ esp8266 mqtt uart bridge.
 You can monitor ESP8266 using Serial1.   
 Serial1 outputs to GPIO2
 
-# How to disable UART boot messages
-The ESP8266 boot rom writes a log to the UART when booting like this:
+# How to disable ESP8266 boot messages
+ESP8266 boot rom writes a log to the UART when booting like this:
 ```
 ets Jan  8 2014,rst cause 1, boot mode:(3,7)
 
@@ -40,7 +40,8 @@ GPIO15(TXD)   --- RX
 GPIO13(RXD)   --- TX
 ```
 The boot message does not reach RX port of other side.   
-However, since GPIO15 is the pin that determines the boot mode, the ESP8266 may not start.
+However, since GPIO15 is a pin that determines the boot mode, ESP8266 does not start.   
+__This method cannot be used.__   
 
 ## Add a circuit
 If the following circuit is added, All message does not reach RX port of other side.   
@@ -56,8 +57,9 @@ digitalWrite(GPIO, LOW);
 Serial.begin(115200);
 ```
 
-__NOTE:GPIO15 cannot be used because it is pulled down.__   
-__NOTE:I tested ESP-12E/12F/12S/13.__
+NOTE:GPIO15 is pulled down and cannot be used for this.   
+
+NOTE:I tested ESP-12E/12F/12S/13.   
 
 
 # MQTT to UART
