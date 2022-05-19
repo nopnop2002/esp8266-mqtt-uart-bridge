@@ -59,8 +59,6 @@ Serial.begin(115200);
 
 NOTE:GPIO15 is pulled down and cannot be used for this.   
 
-NOTE:I tested ESP-12E/12F/12S/13.   
-
 
 # MQTT to UART
 
