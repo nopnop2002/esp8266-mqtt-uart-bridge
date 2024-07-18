@@ -111,7 +111,7 @@ SSID of your Access Point
 - const char* password = "PASSWORD of Your AP";   
 Password of your Access Point
 
-## Publish using mosquitto-clients
+## Subscribe using mosquitto-clients
 ```
 $ mosquitto_sub -v -h broker.emqx.io -p 1883  -t "/esp-bridge"
 ```
