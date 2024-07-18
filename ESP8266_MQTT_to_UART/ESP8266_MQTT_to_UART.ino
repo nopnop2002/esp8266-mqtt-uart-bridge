@@ -8,10 +8,10 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h> // https://github.com/knolleary/pubsubclient
 
-#define MQTT_SERVER     "192.168.10.40"   // You can change
+#define MQTT_SERVER     "broker.emqx.io"  // You can change
 #define MQTT_PORT       1883
-#define MQTT_TOPIC      "atmega328"       // You can change
-#define MQTT_WILL_TOPIC "atmega328"       // You can change
+#define MQTT_TOPIC      "/esp-bridge"     // You can change
+#define MQTT_WILL_TOPIC "/esp-bridge"     // You can change
 #define MQTT_WILL_MSG   "I am leaving..." // You can change
 #define UART_BAUDRATE   115200            // You can change
 #define RXBUFFERSIZE    1024
@@ -29,7 +29,9 @@ PubSubClient client(espClient);
 void errorDisplay(char* buff) {
   Serial1.print("Error:");
   Serial1.println(buff);
+  Serial1.println("Reboot after 10 Sec");
   for (int i=0;i<10;i++) {
+    Serial1.print(".");
     delay(1000);
   }
   ESP.restart();
@@ -111,7 +113,7 @@ void loop()
     errorDisplay("not connect");
   }
   client.loop();
-    if(Serial.available()) {
+  if(Serial.available()) {
     char ch = Serial.read(); // read char from UART
     if (ch == 0x0d) {
 

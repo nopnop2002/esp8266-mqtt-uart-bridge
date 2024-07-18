@@ -66,13 +66,13 @@ NOTE:GPIO15 is pulled down and cannot be used for this.
 
 You need to adjust the following environment.
 
-- #define MQTT_SERVER     "192.168.10.40"   
+- #define MQTT_SERVER     "broker.emqx.io"   
 IP of MQTT Broker
 - #define MQTT_PORT       1883   
 Port of MQTT Broker
-- #define MQTT_TOPIC      "atmega328"   
+- #define MQTT_TOPIC      "/esp-bridge"   
 Subscribe topic
-- #define MQTT_WILL_TOPIC "atmega328"   
+- #define MQTT_WILL_TOPIC "/esp-bridge"   
 Will topic
 - #define MQTT_WILL_MSG   "I am leaving..."   
 Will message
@@ -90,13 +90,13 @@ Password of your Access Point
 
 You need to adjust the following environment.
 
-- #define MQTT_SERVER     "192.168.10.40"   
+- #define MQTT_SERVER     "broker.emqx.io"   
 IP of MQTT Broker
 - #define MQTT_PORT       1883   
 Port of MQTT Broker
-- #define MQTT_TOPIC      "atmega328"   
+- #define MQTT_TOPIC      "/esp-bridge"   
 Publish topic
-- #define MQTT_WILL_TOPIC "atmega328"   
+- #define MQTT_WILL_TOPIC "/esp-bridge"   
 Will topic
 - #define MQTT_WILL_MSG   "I am leaving..."   
 Will message
