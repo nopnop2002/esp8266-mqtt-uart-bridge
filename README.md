@@ -83,6 +83,10 @@ SSID of your Access Point
 - const char* password = "PASSWORD of Your AP";   
 Password of your Access Point
 
+## Publish using mosquitto-clients
+```
+$ mosquitto_pub -h broker.emqx.io -p 1883 -t "/esp-bridge" -m "Hello World"
+```
 
 # UART to MQTT
 
@@ -107,4 +111,7 @@ SSID of your Access Point
 - const char* password = "PASSWORD of Your AP";   
 Password of your Access Point
 
-
+## Publish using mosquitto-clients
+```
+$ mosquitto_sub -v -h broker.emqx.io -p 1883  -t "/esp-bridge"
+```
